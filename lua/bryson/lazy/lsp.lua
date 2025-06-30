@@ -48,6 +48,24 @@ return {
                         filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "html" },
                     })
                 end,
+
+                -- ["rust_analyzer"] = function()
+                --     lspconfig.rust_analyzer.setup({
+                --         capabilities = capabilities,
+                --         settings = {
+                --             ["rust-analyzer"] = {
+                --                 cargo = {
+                --                     allFeatures = true,
+                --                     runBuildScripts = true,
+                --                 },
+                --                 checkOnSave = {
+                --                     command = "clippy",
+                --                 },
+                --             },
+                --         },
+                --     })
+                -- end,
+
             }
 
 
