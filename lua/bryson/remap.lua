@@ -25,9 +25,10 @@ local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader>ff', builtin.find_files) --, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)  --, { desc = 'Telescope live grep' })
 
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set('i', '<C-CR>', 'copilot#Accept("\\<CR>")', {
     expr = true,
     replace_keycodes = false
 })
-vim.g.copilot_no_tab_map = true
+-- vim.g.copilot_no_tab_map = true

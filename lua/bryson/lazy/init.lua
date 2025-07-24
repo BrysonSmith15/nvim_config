@@ -10,6 +10,7 @@ for _, mod in ipairs({
     "fidget",
     -- "supermaven"
     "copilot",
+    "nullls",
 }) do
     table.insert(plugins, require("bryson.lazy." .. mod))
 end

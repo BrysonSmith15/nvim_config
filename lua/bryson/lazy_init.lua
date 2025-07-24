@@ -26,11 +26,11 @@ require("lazy").setup({
     spec = "bryson.lazy",
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
-    -- install = { colorscheme = { "darkside" } },
+    install = { colorscheme = { "darkside" } },
     -- automatically check for plugin updates
     checker = { enabled = true },
     plugins = {
-        { 'pedropmedina/darkside', dependencies = { 'rktjmp/lush.nvim' } },
+        { 'pedropmedina/darkside',           dependencies = { 'rktjmp/lush.nvim' } },
         {
             "mason-org/mason.nvim",
             opts = {}
@@ -98,13 +98,6 @@ require("lazy").setup({
                     desc = "Quickfix List (Trouble)",
                 },
             },
-            {
-                "j-hui/fidget.nvim",
-                -- opts = {
-                --     -- options
-                -- },
-            },
-            { "github/copilot.vim" },
             -- {
             --     "supermaven-inc/supermaven-nvim",
             --     config = function()
@@ -112,5 +105,14 @@ require("lazy").setup({
             --     end,
             -- },
 
-        } }
+        },
+        {
+            "j-hui/fidget.nvim",
+            -- opts = {
+            --     -- options
+            -- },
+        },
+        { "github/copilot.vim" },
+        { "nvim-treesitter/nvim-treesitter", branch = 'master',                    lazy = false, build = ":TSUpdate" }
+    }
 })
